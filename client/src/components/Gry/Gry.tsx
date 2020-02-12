@@ -2,19 +2,46 @@ import React, { useEffect, useState } from "react";
 import {
   Switch,
   Route,
-  useParams,
   useRouteMatch,
 } from "react-router-dom";
-import "./Gry.css";
+
 import WyborGry from "./WyborGry/WyborGry";
+import KolkoIKrzyzyk from "./KolkoIKrzyzyk/KolkoIKrzyzyk";
+import Onitama from "./Onitama/Onitama";
+
+import { ReactComponent as TicTacToeImage } from "../../assets/Gry/tic-tac-toe.svg";
+
+import "./Gry.css";
+
+export interface IGra {
+  nazwa: string, 
+  sciezka: string,
+  obrazek: JSX.Element, 
+  komponent: () => JSX.Element,
+}
 
 const Gry = () => {
 
-  let { url } = useRouteMatch();
+  const listaGier: IGra[] = [
+    {
+      nazwa: "Kółko i krzyżyk",
+      sciezka: "kolko_i_krzyzyk",
+      obrazek: <TicTacToeImage />,
+      komponent: KolkoIKrzyzyk,
+    },
+    { nazwa: "Dooble", sciezka: "kolko_i_krzyzyk", obrazek: <TicTacToeImage />, komponent: KolkoIKrzyzyk },
+    { nazwa: "Memories", sciezka: "kolko_i_krzyzyk", obrazek: <TicTacToeImage />, komponent: KolkoIKrzyzyk },
+    { nazwa: "Onitama", sciezka: "onitama", obrazek: <TicTacToeImage />, komponent: Onitama },
+    { nazwa: "Ghost Stories", sciezka: "kolko_i_krzyzyk", obrazek: <TicTacToeImage />, komponent: KolkoIKrzyzyk },
+    { nazwa: "Refleks", sciezka: "kolko_i_krzyzyk", obrazek: <TicTacToeImage />, komponent: KolkoIKrzyzyk },
+    { nazwa: "Color Game", sciezka: "kolko_i_krzyzyk", obrazek: <TicTacToeImage />, komponent: KolkoIKrzyzyk },
+    { nazwa: "Brain fittness", sciezka: "kolko_i_krzyzyk", obrazek: <TicTacToeImage />, komponent: KolkoIKrzyzyk },
+  ];
+
+  const { url } = useRouteMatch();
 
   // const ENDPOINT = "http://localhost:3001/users";
 
-  // let { id } = useParams();
 
   // const [socket, setSocket] = useState<SocketIOClient.Socket | null>(null);
 
@@ -32,14 +59,14 @@ const Gry = () => {
   //     setSocket(socketIO);
   //   });
   // }, []);
-
+  
   return (
     <div className="Gry">
       <Switch>
         <Route exact path={`${url}`}>
-          <WyborGry />
+          <WyborGry listaGier={listaGier} />
         </Route>
-        {/* <Route path={`${url}/:id`} component={KolkoIKrzyzyk} /> */}
+        {listaGier.map(gra => <Route key={gra.nazwa} path={`${url}/${gra.sciezka}`} component={gra.komponent} />)}        
       </Switch>
     </div>
   );

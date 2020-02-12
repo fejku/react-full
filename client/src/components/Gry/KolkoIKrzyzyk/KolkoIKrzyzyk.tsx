@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import socketIOClient from "socket.io-client";
 
+import "./KolkoIKrzyzyk.css";
+
 const KolkoIKrzyzyk = () => {
   const endpoint = "http://localhost:3001/users";
 
@@ -16,7 +18,9 @@ const KolkoIKrzyzyk = () => {
   //   // });
   // }, []);
 
-  return <div>kk</div>;
+  return <div className="KolkoIKrzyzyk">
+    <svg style={{background: "red"}}></svg>
+  </div>;
 };
 
 export default KolkoIKrzyzyk;
