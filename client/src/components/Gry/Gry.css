@@ -1,0 +1,32 @@
+.gry {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  /* padding: 40px; */
+}
+
+.gry>.gra_container {
+  border: 1px solid #888;
+  flex: 0 1 auto;
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+}
+
+.gry .gra_nazwa {
+  text-align: center;
+  box-shadow: 0 2px 3px rgba(50, 50, 50, 0.5);
+  padding: 10px 0;
+}
+
+.gry .gra_container>a,
+.gry .gra_obrazek {
+  display: contents;
+}
+
+.gry .gra_obrazek>svg {
+  padding: 10px;
+}
