@@ -1,0 +1,9 @@
+.WyborGry>h1 {
+  margin: 20px 30px;
+}
+
+.WyborGry .WyborGry_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
