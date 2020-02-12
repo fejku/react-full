@@ -4,25 +4,29 @@ import socketIOClient from "socket.io-client";
 import "./KolkoIKrzyzyk.css";
 
 const KolkoIKrzyzyk = () => {
-  const plansza = <svg viewBox="0 0 300 300">
-  <g stroke="#000" strokeWidth="2">
-    <path d="m100 0v300" fill="none" />
-    <path d="m200 0v300" fill="none" />
-    <path d="m0 100h300" fill="none" />
-    <path d="m0 200h300" fill="none" />
-  </g>
-</svg>;
+  const plansza = (
+    <svg viewBox="0 0 300 300" fill="red">
+      <g stroke="#000" strokeWidth="1">
+        <g className="plansza">
+          <line className="liniaPozioma" x1="0" y1="100" x2="300" y2="100" />
+          <line className="liniaPozioma" x1="0" y1="200" x2="300" y2="200" />
+          <line className="liniaPionowa" x1="100" y1="0" x2="100" y2="300" />
+          <line className="liniaPionowa" x1="200" y1="0" x2="200" y2="300" />
+        </g>
+        <g className="krzyzyk">
+          <line x1="10" y1="10" x2="90" y2="90" strokeWidth="2" />
+          <line x1="10" y1="90" x2="90" y2="10" strokeWidth="2" />
+        </g>
+        <g className="kolko">
+          <circle cx="50" cy="50" r="45" fill="none" strokeWidth="2" />
+        </g>
+      </g>
+    </svg>
+  );
 
-const cross =     <svg viewBox="0 0 100 100">
-  <line x1="0" y1="0" x2="100" y2="100" stroke="#000" />
-  <line x1="0" y1="100" x2="100" y2="0" stroke="#000" />
-</svg>;
+  const nazwaGracza = sessionStorage.getItem("nazwaGracza");
 
-const circle = <svg viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="49" stroke="#000" fill="none" />
-</svg>;
-
-  const endpoint = "http://localhost:3001/users";
+  // const endpoint = "http://localhost:3001/users";
 
   // useEffect(() => {
   //   const socket = socketIOClient(endpoint);
@@ -36,9 +40,7 @@ const circle = <svg viewBox="0 0 100 100">
   //   // });
   // }, []);
 
-  return <div className="KolkoIKrzyzyk">
-    {plansza}
-  </div>;
+  return <div className="KolkoIKrzyzyk">{plansza}</div>;
 };
 
 export default KolkoIKrzyzyk;
