@@ -1,3 +1,9 @@
 .KolkoIKrzyzyk {
-  margin: 20px 30px;
+  padding: 20px 30px;
+  display: flex;
+  height: 100vh;
+}
+
+.KolkoIKrzyzyk>svg {
+  flex: 1;
 }
