@@ -3,6 +3,8 @@ import { useHistory, useLocation } from "react-router-dom";
 // import { UzytkownikSocketContext } from "../App";
 // import { UzytkownikSocketEvent } from "../model/SocketEvent";
 
+import classes from "./Nazwa.module.css";
+
 const Nazwa: React.FC = () => {
   // const socket = useContext(UzytkownikSocketContext);
   const history = useHistory();
@@ -24,9 +26,12 @@ const Nazwa: React.FC = () => {
   };
 
   return (
-    <div>
-      <input type="text" value={nazwa} onChange={handleZmienNazwe} />
-      <button onClick={handleUstawNazwe}>Zapisz</button>
+    <div className={classes.nazwa}> 
+      <h1>Podaj nazwę gracza</h1>
+      <div>
+        <input type="text" value={nazwa} onChange={handleZmienNazwe} />
+        <button onClick={handleUstawNazwe}>Zapisz</button>
+      </div>
     </div>
   );
 };

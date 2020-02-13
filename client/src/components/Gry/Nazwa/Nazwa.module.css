@@ -1,0 +1,16 @@
+.nazwa {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.nazwa>input {
+  width: 60%;
+}
