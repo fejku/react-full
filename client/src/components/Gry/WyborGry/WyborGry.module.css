@@ -1,10 +1,12 @@
-.WyborGry>h1 {
+.wybor_gry {}
+
+.header {
   font-size: 44px;
   font-weight: 300;
-  margin: 0 30px;
+  text-align: center;
 }
 
-.WyborGry .WyborGry_container {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

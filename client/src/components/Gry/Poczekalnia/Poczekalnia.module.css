@@ -1,0 +1,48 @@
+.poczekalnia {}
+
+.header {
+  font-size: 44px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.nowa_gra {
+  align-self: flex-end;
+  padding: 0 3rem;
+  box-shadow: 0 0 3px 0 #888;
+  border-radius: 1rem;
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin: 1rem 2rem 1rem 0;
+}
+
+.table {}
+
+.table>thead {
+  box-shadow: 0 -5px 5px -5px #888;
+  box-shadow: 0 0px 5px 0px #888;
+
+}
+
+.table>thead>tr {
+  padding: 0 2rem;
+}
+
+.Poczekalnia table thead tr td {
+  border-bottom: 1px solid #ddd;
+  padding: 3px 10px;
+}
+
+.Poczekalnia table tbody tr td {
+  border-bottom: 1px solid #ddd;
+  padding: 3px 10px;
+}
+
+.Poczekalnia table tbody tr:nth-child(odd)>td {
+  background-color: #f3f3f3;
+}

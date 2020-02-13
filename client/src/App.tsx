@@ -16,10 +16,6 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/gry" component={Gry} />
-            {/* <Route exact path="/nazwa" component={Nazwa} />
-            <NazwaRoute exact path="/kik">
-              <KolkoIKrzyzyk />
-            </NazwaRoute> */}
           </Switch>
         </div>
       </BrowserRouter>

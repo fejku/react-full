@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import socketIOClient from "socket.io-client";
 
-import "./KolkoIKrzyzyk.css";
+import classes from "./KolkoIKrzyzyk.module.css";
 
 const KolkoIKrzyzyk = () => {
   const plansza = (
-    <svg viewBox="0 0 300 300" fill="red">
+    <svg className={classes.plansza} viewBox="0 0 300 300" fill="red">
       <g stroke="#000" strokeWidth="1">
         <g className="plansza">
           <line className="liniaPozioma" x1="0" y1="100" x2="300" y2="100" />
@@ -38,10 +38,12 @@ const KolkoIKrzyzyk = () => {
   //   // });
   // }, []);
 
-  return (<div className="KolkoIKrzyzyk">
-    <h1 className="status">Tura przeciwnika</h1>
-    {plansza}
-  </div>);
+  return (
+    <div className={classes.kolko_i_krzyzyk}>
+      <h1 className={classes.status}>Tura przeciwnika</h1>
+      {plansza}
+    </div>
+  );
 };
 
 export default KolkoIKrzyzyk;

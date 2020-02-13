@@ -10,6 +10,7 @@ import { ReactComponent as TicTacToeImage } from "../../assets/Gry/tic-tac-toe.s
 
 import "./Gry.css";
 import Nazwa from "./Nazwa/Nazwa";
+import Poczekalnia from "./Poczekalnia/Poczekalnia";
 
 export interface IGra {
   nazwa: string;
@@ -100,7 +101,8 @@ const Gry = () => {
         <Route path={`${url}/nazwa`} component={Nazwa} />
         {listaGier.map(gra => (
           <NazwaGracza key={gra.nazwa} path={`${url}/${gra.sciezka}`}>
-            {gra.komponent}
+            <Poczekalnia gra={gra} />
+            {/* {gra.komponent} */}
           </NazwaGracza>
         ))}
       </Switch>

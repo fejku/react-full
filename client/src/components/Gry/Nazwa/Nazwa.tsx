@@ -26,11 +26,18 @@ const Nazwa: React.FC = () => {
   };
 
   return (
-    <div className={classes.nazwa}> 
-      <h1>Podaj nazwę gracza</h1>
-      <div>
-        <input type="text" value={nazwa} onChange={handleZmienNazwe} />
-        <button onClick={handleUstawNazwe}>Zapisz</button>
+    <div className={classes.nazwa}>
+      <h1 className={classes.header}>Podaj nazwę gracza</h1>
+      <div className={classes.input_container}>
+        <input
+          className={classes.input}
+          type="text"
+          value={nazwa}
+          onChange={handleZmienNazwe}
+        />
+        <button className={classes.btn_zapisz} onClick={handleUstawNazwe}>
+          Zapisz
+        </button>
       </div>
     </div>
   );

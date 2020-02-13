@@ -1,4 +1,4 @@
-.Gra {  
+.gra {
   border: 1px solid #888;
   flex: 0 1 auto;
   width: 300px;
@@ -11,25 +11,28 @@
   font-size: 22px;
 }
 
-.Gra:hover {
+.gra:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 }
 
-.Gra>a,
-.Gra .gra_obrazek {
+.gra>a {
   display: contents;
 }
 
-.Gra .gra_nazwa {
+.nazwa {
   text-align: center;
   box-shadow: 0 2px 3px rgba(50, 50, 50, 0.5);
   padding-top: 5px;
 }
 
-.Gra .gra_nazwa>h3 {
+.header {
   font-weight: inherit;
 }
 
-.Gra .gra_obrazek>svg {
+.obrazek {
+  display: contents;
+}
+
+.obrazek>svg {
   padding: 10px;
 }

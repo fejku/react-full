@@ -1,15 +1,15 @@
-.KolkoIKrzyzyk {
+.kolko_i_krzyzyk {
   padding: 20px 30px;
   display: flex;
   height: 100vh;
   flex-direction: column;
 }
 
-.KolkoIKrzyzyk>svg {
-  flex: 1;
-}
-
 .status {
   text-align: center;
   padding-bottom: 20px;
+}
+
+.plansza {
+  flex: 1;
 }

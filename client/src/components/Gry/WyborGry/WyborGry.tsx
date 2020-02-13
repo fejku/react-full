@@ -1,24 +1,25 @@
-import React from 'react'
+import React from "react";
 
 import { IGra } from "../Gry";
 import Gra from "./Gra/Gra";
 
-import "./WyborGry.css";
+import classes from "./WyborGry.module.css";
 
 interface WyborGryProps {
   listaGier: IGra[];
 }
 
 const WyborGry: React.FC<WyborGryProps> = ({ listaGier }) => {
-
   return (
-    <div className="WyborGry">
-      <h1>Gry</h1>
-      <div className="WyborGry_container">
-        {listaGier.map(gra => <Gra key={gra.nazwa} gra={gra}/>)}
+    <div className={classes.wybor_gry}>
+      <h1 className={classes.header}>Gry</h1>
+      <div className={classes.container}>
+        {listaGier.map(gra => (
+          <Gra key={gra.nazwa} gra={gra} />
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default WyborGry
+export default WyborGry;
