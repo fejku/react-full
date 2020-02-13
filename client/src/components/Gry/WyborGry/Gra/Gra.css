@@ -1,4 +1,4 @@
-.Gra {
+.Gra {  
   border: 1px solid #888;
   flex: 0 1 auto;
   width: 300px;
@@ -15,9 +15,14 @@
 }
 
 .Gra .gra_nazwa {
+  font-size: 22px;
   text-align: center;
   box-shadow: 0 2px 3px rgba(50, 50, 50, 0.5);
-  padding: 10px 0;
+  padding-top: 5px;
+}
+
+.Gra .gra_nazwa>h3 {
+  font-weight: 400;
 }
 
 .Gra .gra_obrazek>svg {
