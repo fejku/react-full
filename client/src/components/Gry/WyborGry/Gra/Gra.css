@@ -7,6 +7,12 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.Gra:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 }
 
 .Gra>a,
@@ -15,14 +21,13 @@
 }
 
 .Gra .gra_nazwa {
-  font-size: 22px;
   text-align: center;
   box-shadow: 0 2px 3px rgba(50, 50, 50, 0.5);
   padding-top: 5px;
 }
 
 .Gra .gra_nazwa>h3 {
-  font-weight: 400;
+  font-weight: inherit;
 }
 
 .Gra .gra_obrazek>svg {

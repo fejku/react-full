@@ -38,7 +38,10 @@ const KolkoIKrzyzyk = () => {
   //   // });
   // }, []);
 
-  return <div className="KolkoIKrzyzyk">{plansza}</div>;
+  return (<div className="KolkoIKrzyzyk">
+    <h1 className="status">Tura przeciwnika</h1>
+    {plansza}
+  </div>);
 };
 
 export default KolkoIKrzyzyk;
