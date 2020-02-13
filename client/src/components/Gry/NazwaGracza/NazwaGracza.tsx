@@ -5,13 +5,12 @@ interface NazwaGraczaProps {
   path: string;
 }
 
-const NazwaGracza: React.FC<NazwaGraczaProps> = ({ children, ...rest }) => {
+const NazwaGracza: React.FC<NazwaGraczaProps> = ({ children }) => {
   const { url } = useRouteMatch();
   const nazwaGracza = sessionStorage.getItem("nazwaGracza");
 
   return (
     <Route
-      {...rest}
       render={({ location }) =>
         nazwaGracza ? (
           children

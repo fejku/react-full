@@ -1,0 +1,13 @@
+.element_menu {
+  padding: 9px 15px 8px 20px;
+  display: flex;
+}
+.element_menu>svg {
+  height: 21px;
+  width: 20px;  
+}
+
+.element_menu.aktywny {
+  border-left: 4px solid #888;
+  padding-left: 16px;
+}

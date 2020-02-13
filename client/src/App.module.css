@@ -1,0 +1,8 @@
+.app {
+  display: flex;
+}
+
+.main_body {
+  width: calc(100% - 60px); /* menu width */
+  margin-left: 60px;
+}

@@ -5,21 +5,23 @@ import Menu from "./components/Menu/Menu";
 import Home from "./components/Home/Home";
 import Gry from "./components/Gry/Gry";
 
-import "./App.css";
+import classes from "./App.module.css";
 
 const App = () => {
   return (
-    <div className="App">
+    <div className={classes.app}>
       <BrowserRouter>
         <Menu />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/gry" component={Gry} />
-          {/* <Route exact path="/nazwa" component={Nazwa} />
-          <NazwaRoute exact path="/kik">
-            <KolkoIKrzyzyk />
-          </NazwaRoute> */}
-        </Switch>
+        <div className={classes.main_body}>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/gry" component={Gry} />
+            {/* <Route exact path="/nazwa" component={Nazwa} />
+            <NazwaRoute exact path="/kik">
+              <KolkoIKrzyzyk />
+            </NazwaRoute> */}
+          </Switch>
+        </div>
       </BrowserRouter>
     </div>
   );

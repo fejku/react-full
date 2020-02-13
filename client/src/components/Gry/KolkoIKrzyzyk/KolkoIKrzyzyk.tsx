@@ -24,8 +24,6 @@ const KolkoIKrzyzyk = () => {
     </svg>
   );
 
-  const nazwaGracza = sessionStorage.getItem("nazwaGracza");
-
   // const endpoint = "http://localhost:3001/users";
 
   // useEffect(() => {
