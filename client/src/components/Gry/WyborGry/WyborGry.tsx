@@ -1,6 +1,6 @@
 import React from "react";
 
-import { IGra } from "../Gry";
+import { IGra } from "../../../model/IGra";
 import Gra from "./Gra/Gra";
 
 import classes from "./WyborGry.module.css";

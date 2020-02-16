@@ -13,16 +13,26 @@ const Nazwa: React.FC = () => {
 
   const { from } = location.state || { from: { pathname: "/" } };
 
-  const handleZmienNazwe = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setNazwa(e.target.value);
-  };
-
-  const handleUstawNazwe = () => {
+  const ustawNazwe = () => {
     sessionStorage.setItem("nazwaGracza", nazwa);
     // if (socket) {
     //   socket.emit(UzytkownikSocketEvent.USTAW_NAZWE, nazwa);
     // }
     history.replace(from);
+  };
+
+  const handleZmienNazwe = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setNazwa(e.target.value);
+  };
+
+  const handleUstawNazwe = () => {
+    ustawNazwe();
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      ustawNazwe();
+    }
   };
 
   return (
@@ -34,6 +44,7 @@ const Nazwa: React.FC = () => {
           type="text"
           value={nazwa}
           onChange={handleZmienNazwe}
+          onKeyDown={handleKeyDown}
         />
         <button className={classes.btn_zapisz} onClick={handleUstawNazwe}>
           Zapisz
